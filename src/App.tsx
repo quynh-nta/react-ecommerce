@@ -17,11 +17,12 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import BannerPopup from "./components/BannerPopup";
 import AllCategories from "./pages/AllCategories";
 import SingleCategory from "./pages/SingleCategory";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
     <Provider store={store}>
-      <Navbar />
+      <Navbar title={"Shop"} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<AllProducts />} />
@@ -34,8 +35,11 @@ function App() {
         <Route path="/account" element={<ProtectedRoute />}>
           <Route path="/account" element={<Profile />} />
         </Route>
+        <Route path="/admin" element={<ProtectedRoute />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
       </Routes>
-      <Toaster position="bottom-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <Footer />
       <Cart />
       <LoginModal />

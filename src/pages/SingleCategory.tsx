@@ -18,7 +18,7 @@ const SingleCategory: FC = () => {
     };
 
     fetchProducts();
-  }, [slug]);
+  }, [slug]);//(mảng dependencies) hàm callback sẽ chỉ được gọi lại khi giá trị của slug thay đổi.
 
   return (
     <div className="container mx-auto min-h-[83vh] p-4 font-karla">
