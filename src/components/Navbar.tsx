@@ -11,7 +11,12 @@ import CustomPopup from "./CustomPopup";
 import { updateDarkMode } from "../redux/features/homeSlice";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  title: string;
+}
+
+// nếu không dùng FC, TypeScript sẽ không hiểu component có nhận props hay không
+const Navbar: FC<NavbarProps> = ({title}) => {
   const dispatch = useAppDispatch();
   const cartCount = useAppSelector(
     (state) => state.cartReducer.cartItems.length
@@ -33,7 +38,7 @@ const Navbar: FC = () => {
             className="text-4xl font-bold dark:text-white"
             data-test="main-logo"
           >
-            Shopify
+            {title}
           </Link>
           <div className="lg:flex hidden w-full max-w-[500px]">
             <input
@@ -46,6 +51,13 @@ const Navbar: FC = () => {
             </div>
           </div>
           <div className="flex gap-4 md:gap-8 items-center dark:text-white">
+            <Link
+              to="/admin"
+              className="text-xl font-bold"
+              data-test="main-products"
+            >
+              Quản lý
+            </Link>
             <Link
               to="/products"
               className="text-xl font-bold"

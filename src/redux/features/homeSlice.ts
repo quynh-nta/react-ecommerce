@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { HomeSlice } from "../../models/HomeSlice";
 
 const initialState: HomeSlice = {
-  isBannerVisible: true,
+  isBannerVisible: false,
   isDarkMode: false,
 };
 

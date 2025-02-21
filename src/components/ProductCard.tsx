@@ -34,8 +34,10 @@ const ProductCard: FC<Product> = ({
           discountPercentage,
         })
       );
+
       toast.success("item added to cart successfully", {
         duration: 3000,
+        position: "top-center",
       });
     });
   };

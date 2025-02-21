@@ -5,11 +5,11 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 //React sẽ gắn ứng dụng của bạn vào một phần tử HTML (<div id="root"></div>) trong file index.html.
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <App /> 
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 //<React.StrictMode> công cụ giúp phát hiện lỗi và cảnh báo trong chế độ phát triển (development mode).
 
