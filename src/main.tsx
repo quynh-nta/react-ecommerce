@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import React from "react";
 //React sẽ gắn ứng dụng của bạn vào một phần tử HTML (<div id="root"></div>) trong file index.html.
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
